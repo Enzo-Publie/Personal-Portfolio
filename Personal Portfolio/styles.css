@@ -1,0 +1,161 @@
+:root{
+    --body-blue: #30415d;
+    --body-red: #cf6766;
+    --body-white: #F5F5F5;
+    --body-dark: #031424;
+    --body-light: #8EAEBD;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Open Sans', serif;
+    font-size: 1.8rem;
+    color: var(--body-white)
+}
+
+h1{
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+h2 {
+    color: var(--body-dark);
+    font-size: 4rem;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+p {
+    color: var(--body-white);
+    text-decoration: none;
+    text-align: center;
+}
+
+/*Navigation Bar */
+
+#navbar {
+    background: var(--body-red);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;;
+    height: 100px;
+    position:fixed;
+    top: 0;
+    left: 0;
+}
+
+#navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 650px) {
+    #navbar {
+        justify-content: center;
+    }
+}
+
+
+#navbar ul a {
+    display: block;
+    font-size: 2rem;
+    padding: 38.5px;
+    text-decoration: none;
+    color: var(--body-white);
+}
+
+@media (max-width:400px) {
+    #navbar ul a {
+        font-size: 1.5rem;
+        padding: 41.5px;
+    }
+}
+
+
+#navbar ul a:hover {
+    background: var(--body-blue);
+}
+
+/*Main*/
+
+/*Welcome Section*/
+
+#welcome-section {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--body-dark);
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Projects Section */
+
+#projects {
+    padding-top: 100px;
+    background-color: var(--body-light);
+    width: 100%;
+
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+
+}
+
+.project-tile {
+    background-color: var(--body-blue);
+    border: 1px solid var(--body-blue) ;
+}
+
+.project-tile img {
+
+    height: calc(100%-64px);
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-tile p {
+    padding: 2rem 0;
+}
+
+/*Contact info*/
+
+#contacts {
+    background-color: var(--body-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+}
+
+#contacts h2 {
+    color: var(--body-white);
+}
+
+#contacts a {
+    color: var(--body-white);
+    text-decoration: none;
+    font-size: 2rem;
+}
